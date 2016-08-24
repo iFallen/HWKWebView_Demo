@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" text="https://www.apple.com" placeholder="Search or enter website name" translatesAutoresizingMaskIntoConstraints="NO" id="69x-kz-S0T">
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="sCg-Kv-bL3"/>
+                                </connections>
+                            </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e23-K0-4nR">
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RqH-ga-BUD">
+                                <items>
+                                    <barButtonItem title="←" id="jtk-uY-k8T">
+                                        <connections>
+                                            <action selector="backAction:" destination="BYZ-38-t0r" id="U1A-HO-ZTe"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="16" style="plain" systemItem="fixedSpace" id="jhx-1R-nln"/>
+                                    <barButtonItem title="→" id="fWf-mi-0dS">
+                                        <connections>
+                                            <action selector="forwardAction:" destination="BYZ-38-t0r" id="ELz-dr-sm9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="I1S-sZ-mla"/>
+                                    <barButtonItem systemItem="refresh" id="e7s-rT-5bU">
+                                        <connections>
+                                            <action selector="reloadAction:" destination="BYZ-38-t0r" id="aam-fY-IL3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tDh-cp-epZ"/>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RqH-ga-BUD" secondAttribute="bottom" id="16n-xm-AtP"/>
+                            <constraint firstItem="e23-K0-4nR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2im-Ca-KrC"/>
+                            <constraint firstAttribute="trailing" secondItem="tDh-cp-epZ" secondAttribute="trailing" id="30a-Y2-i34"/>
+                            <constraint firstItem="RqH-ga-BUD" firstAttribute="top" secondItem="e23-K0-4nR" secondAttribute="bottom" id="Bxh-zC-gxV"/>
+                            <constraint firstItem="e23-K0-4nR" firstAttribute="top" secondItem="69x-kz-S0T" secondAttribute="bottom" id="FFN-TN-RYy"/>
+                            <constraint firstAttribute="trailing" secondItem="e23-K0-4nR" secondAttribute="trailing" id="GK9-g8-TUq"/>
+                            <constraint firstItem="tDh-cp-epZ" firstAttribute="top" secondItem="69x-kz-S0T" secondAttribute="bottom" id="JiT-0V-i28"/>
+                            <constraint firstAttribute="trailing" secondItem="69x-kz-S0T" secondAttribute="trailing" id="K0u-XS-tBy"/>
+                            <constraint firstItem="69x-kz-S0T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Qoj-9Z-nSR"/>
+                            <constraint firstItem="RqH-ga-BUD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ViL-It-gpI"/>
+                            <constraint firstItem="tDh-cp-epZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gBl-wr-dcZ"/>
+                            <constraint firstItem="69x-kz-S0T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oRJ-Ti-6Jr"/>
+                            <constraint firstAttribute="trailing" secondItem="RqH-ga-BUD" secondAttribute="trailing" id="zlS-zY-7SG"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="containerView" destination="e23-K0-4nR" id="XU3-bQ-Obz"/>
+                        <outlet property="progressView" destination="tDh-cp-epZ" id="8yb-Q2-nkV"/>
+                        <outlet property="searchBar" destination="69x-kz-S0T" id="Dnj-WC-hoK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42.399999999999999" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
