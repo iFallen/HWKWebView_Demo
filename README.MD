@@ -1,4 +1,4 @@
-### `WKWebView 精度条显示Demo`
+### `WKWebView 进度条显示Demo`
 
 >
 WKWebView 支持iOS8.0之后的版本，性能比UIWebView高
