@@ -1,7 +1,9 @@
 ### `WKWebView 精度条显示Demo`
 
 >
-WKWebView 8.0之后的SDK，性能比UIWebView高
+WKWebView 支持iOS8.0之后的版本，性能比UIWebView高
+
+### `Tag`
 
 - `Xcode 10.0`
 
